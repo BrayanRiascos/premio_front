@@ -32,7 +32,7 @@ function UsuarioRegistro({ onLoginSuccess }) {
        
       }else{
 
-        const respuesta = await fetch('http://localhost:5000/api/crear', {
+        const respuesta = await fetch('https://premio-back.vercel.app/api/crear', {
           method: 'POST',
           
           headers: {

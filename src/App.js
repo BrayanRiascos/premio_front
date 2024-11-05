@@ -40,7 +40,7 @@ function App({ onLogout}) {
         return;
       }
 
-      const response = await fetch(`http://localhost:5000/api/regcodigo/${user}`, {
+      const response = await fetch(`https://premio-back.vercel.app/api/regcodigo/${user}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -66,7 +66,7 @@ function App({ onLogout}) {
     const user = localStorage.getItem('id');
 
     try {
-      const response = await fetch('http://localhost:5000/api/leercodigos/'+user); // URL de la API
+      const response = await fetch('https://premio-back.vercel.app/api/leercodigos/'+user); // URL de la API
       const datacodigos = await response.json();
       //console.log('objeto:', datacodigos);
       const codigosArray = Array.isArray(datacodigos) ? datacodigos : datacodigos.datos_obtenidos || [];

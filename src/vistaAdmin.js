@@ -22,7 +22,7 @@ function Vistaadmin({ onLogout}) {
     e.preventDefault();
     
     try {
-        const response = await fetch('http://localhost:5000/api/leerganadores'); // URL de la API
+        const response = await fetch('https://premio-back.vercel.app/api/leerganadores'); // URL de la API
         const datacodigos = await response.json();
         console.log('objeto:', datacodigos);
         const codigosArray = Array.isArray(datacodigos) ? datacodigos : datacodigos.datos_obtenidos || [];
